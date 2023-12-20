@@ -1,0 +1,100 @@
+<p class="container">agregar vuelo</p>
+
+<div class="card">
+    <div class="card-body">
+
+        <form [formGroup]="fligthCtrl" class="container mt-4">
+
+            <div class="mb-3">
+                <label for="Origen" class="form-label">Origen</label>
+                <input type="text" class="form-control" id="Origen" [formControl]="fligthCtrl.controls.Origen"
+                    placeholder="Nombre del origen">
+                <p [class.show]="
+                fligthCtrl.controls.Origen.invalid && fligthCtrl.controls.Origen.touched
+                  " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <label for="Destino" class="form-label">Destino</label>
+                <input type="text" class="form-control" id="Destino" [formControl]="fligthCtrl.controls.Destino"
+                    placeholder="Nombre del Destino">
+                <p [class.show]="
+                fligthCtrl.controls.Destino.invalid && fligthCtrl.controls.Destino.touched
+                  " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <label for="Fecha_de_salida" class="form-label">Fecha de salidad</label>
+                <input type="date" class="form-control" id="Fecha_de_salida"
+                    [formControl]="fligthCtrl.controls.Fecha_de_salida" placeholder="Nombre del Fecha_de_salida">
+                <p [class.show]="
+                fligthCtrl.controls.Fecha_de_salida.invalid && fligthCtrl.controls.Fecha_de_salida.touched
+                  " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <label for="Fecha_de_llegada" class="form-label">Fecha de llegada</label>
+                <input type="date" class="form-control" id="Fecha_de_llegada"
+                    [formControl]="fligthCtrl.controls.Fecha_de_llegada" placeholder="Nombre del Fecha_de_llegada">
+                <p [class.show]="
+                fligthCtrl.controls.Fecha_de_llegada.invalid && fligthCtrl.controls.Fecha_de_llegada.touched
+                  " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <label for="Aerolinea" class="form-label">Aerolínea</label>
+                <input type="text" class="form-control" id="Aerolinea" [formControl]="fligthCtrl.controls.Aerolinea"
+                    placeholder="Nombre de la aerolínea">
+                <p [class.show]="
+                fligthCtrl.controls.Aerolinea.invalid && fligthCtrl.controls.Aerolinea.touched
+                  " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <!-- Repite la estructura para los demás campos -->
+
+            <div class="mb-3">
+                <label for="Precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="Precio" [formControl]="fligthCtrl.controls.Precio"
+                    placeholder="Precio">
+                <p [class.show]="
+                    fligthCtrl.controls.Precio.invalid && fligthCtrl.controls.Precio.touched
+                      " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <div class="mb-3">
+                <label for="Puestos" class="form-label">Puestos</label>
+                <input type="number" class="form-control" id="Puestos" [formControl]="fligthCtrl.controls.Puestos"
+                    placeholder="Puestos disponibles">
+                <p [class.show]="
+                    fligthCtrl.controls.Puestos.invalid && fligthCtrl.controls.Puestos.touched
+                      " class="message-error mt-2">
+                    <span class="font-medium">Oops!</span> No valido!
+                </p>
+            </div>
+
+            <!-- Continúa con los campos restantes -->
+            <div class="w-100 d-flex">
+                <div class="w-50">
+                    <button type="submit" class="btn btn-primary" (click)="addFlithg()">Enviar</button>
+                </div>
+                <div class="w-50 d-flex justify-content-end">
+                    <button class="btn btn-danger " routerLink="">regresar</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+.message-error {
+    display: none;
+    opacity: 0;
+    transition: all linear .5s;
+    color: red;
+    font-weight: 600;
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+}
+
+.show {
+    display: block;
+    opacity: 1;
+}
